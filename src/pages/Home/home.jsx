@@ -1,14 +1,11 @@
-import clsx from "clsx"
 
-import Layout from "../../components/Layout/layout"
-// import styles from "../../components/Layout/layout.module.scss"
+
+import Navbar from "../../components/Navbar/navbar"
 
 export default function Home() {
     return (
-        <Layout>
-            <nav className={clsx()}>
+        <Navbar>
 
-            </nav>
-        </Layout>
+        </Navbar>
     )
 }

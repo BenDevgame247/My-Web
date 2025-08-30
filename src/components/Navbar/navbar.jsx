@@ -1,17 +1,14 @@
 import clsx from "clsx"
-
-
-import Layout from "../Layout/layout"
-import styles from "../Layout/layout.module.scss"
+import styles from "./navbar.module.scss"
 
 export default function Navbar() {
     return (
-        <Layout>
-            <nav className={clsx(styles.navbar)}>
-                <ul>
-                    <li>Hello!</li>
-                </ul>
-            </nav>
-        </Layout>
+        <nav className={clsx(styles.navbar)}>
+            <ul className={clsx(styles.menu)}>
+                <li>
+                    <a href="/">Trang chủ</a>
+                </li>
+            </ul>
+        </nav>
     )
 }

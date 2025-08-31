@@ -8,9 +8,9 @@ export default function Navbar() {
     return (
         <nav className={clsx(styles.navbar)}>
             {/* Menu + logo */}
-            <button className={clsx(styles.logoBtn)} aria-label="Mở menu">
+            <div className={clsx(styles.logo)}>
                 <img src={logo} alt="logo" />
-            </button>
+            </div>
 
             {/* search */}
             <div className={clsx(styles.search)}>
@@ -24,17 +24,7 @@ export default function Navbar() {
                 <img src={logo} alt="Avatar" />
             </div>
 
-            {/* Sub menu */}
-            <div className={clsx(styles.subMenu)}>
-                <ul>
-                    <li>
-                        <Link to = "/">Trang chủ</Link>
-                    </li>
-                    <li>
-                        <Link to = "tai-lieu">Tài liệu</Link>
-                    </li>
-                </ul>
-            </div>
+            {/* Menu */}
         </nav>
     )
 }

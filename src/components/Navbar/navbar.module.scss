@@ -1,38 +1,29 @@
 .navbar {
     display: grid;
-    grid-template-areas: 
-        "logo search avatar"
-        "subMenu subMenu subMenu";
     grid-template-columns: auto 1fr auto;
-    gap: 8px 10px;
+    gap: 0 15px;
     align-items: center;
-    width: 100%;
 
     background: #0f172a;
     color: #fff;
-    padding: 8px 12px;
+    padding: 15px;
     border-radius: 12px;
 
-    .logoBtn {
-        grid-area: logo;
-        border: 0;
-        background: transparent;
-        padding: 4px;
-        line-height: 0;
-        cursor: pointer;
-
+    .logo {
+        
         img {
             display: block;
-            height: 30px;
+            height: 45px;
+            width: 45px;
+            border-radius: 10px;
         }
     }
 
     .search {
-        grid-area: search;
 
         input {
             width: 100%;
-            padding: 10px 20px;
+            padding: 10px 10px;
             border-radius: 10px;
             border: 1px solid #334155;
             background: #0b1220;
@@ -42,41 +33,13 @@
     }
 
     .avatar {
-        grid-area: avatar;
-
+        
         img {
-            width: 32px;
+            width: 45px;
+            height: 45px;
             object-fit: cover;
-            cursor: pointer;
-            border: 2px solid #334155;
-        }
-    }
-
-    .subMenu {
-        grid-area: subMenu;
-
-        ul {
-            list-style-type: none;
-            margin: 6px 0 0;
-            padding: 0;
-            display: grid;
-            gap: 8px;
-
-            li {
-
-                a {
-                    display: block;
-                    text-decoration: none;
-                    color: #fff;
-                    padding: 10px 12px;
-                    border-radius: 8px;
-                    background: #1e293b;
-
-                    &:hover {
-                        background: #334155;
-                    }
-                }
-            }
+            border: 1px solid #334155;
+            border-radius: 45px;
         }
     }
 }

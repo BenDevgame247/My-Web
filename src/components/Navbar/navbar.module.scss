@@ -1,4 +1,4 @@
-.navbar {
+.topNav {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 0 15px;
@@ -40,6 +40,45 @@
             object-fit: cover;
             border: 1px solid #334155;
             border-radius: 45px;
+        }
+    }
+}
+
+.botNav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+
+    background: #0f172a;
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 12px 12px 0 0;
+
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0));
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        li {
+
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 1.1rem;
+                padding: 6px 0;
+                color: #fff;
+
+                &:hover {
+                    color: #38bdf8;
+                }
+            }
         }
     }
 }

@@ -1,51 +1,55 @@
-import clsx from "clsx"
-import { Link } from "react-router"
-
-import logo from "../../assets/LogoDiscord.png"
+import { Link } from "react-router";
+import clsx from "clsx";
+import Layout from "../Layout/layout";
+// import publicStyles from "../Layout/layout.module.scss"
 import styles from "./navbar.module.scss"
+import logo from "../../assets/LogoDiscord.png"
+import Home from "../../pages/Home/home";
 
 export default function Navbar() {
     return (
-        <>
+        <Layout>
             {/* Top navbar */}
-            <nav className={clsx(styles.topNav)}>
-                {/* Menu + logo */}
-                <div className={clsx(styles.logo)}>
-                    <img src={logo} alt="logo" />
-                </div>
+            <header className={clsx(styles.header)}>
+                {/* logo */}
+                <img src={logo} alt="Logo" />
 
-                {/* search */}
-                <div className={clsx(styles.search)}>
-                    <form role="search">
-                        <input type="text" placeholder="Tìm kiếm...."/>
-                    </form>
-                </div>
+                {/* Search bar */}
+                <form className={clsx(styles.search)} role="search">
+                    <input type="text" placeholder="Tìm kiếm"/>
+                </form>
 
-                {/* avatar user */}
+                {/* Avatar user */}
                 <div className={clsx(styles.avatar)}>
-                    <img src={logo} alt="Avatar" />
+                    {/* Ảnh */}
+                    <img src={logo} alt="Logo"/>
                 </div>
-            </nav>
+            </header>
 
-            {/* Bottom navbar */}
-            <nav className={clsx(styles.botNav)}>
+            {/* Content */}
+            <main className={clsx(styles.main)}>
+                <Home />
+            </main>
 
-                {/* List */}
-                <ul className={clsx(styles.list)}>
-                    <li className="item-1">
-                        <Link to="/">Trang chủ</Link>
-                    </li>
-                    <li className="item-2">
-                        <Link to="tai-lieu">Tài liệu</Link>
-                    </li>
-                    <li className="item-3">
-                        <Link to="dien-dan">Diễn đàn</Link>
-                    </li>
-                    <li className="item-4">
-                        <Link to="bai-tap">Bài tập</Link>
-                    </li>
-                </ul>
-            </nav>
-        </>
+            {/* Bottom navbar - Menu list */}
+            <footer className={clsx(styles.footer)}>
+                <div className={clsx(styles.list)}>
+                    <ul>
+                        <li className="item-1">
+                            <Link to="/">Trang chủ</Link>
+                        </li>
+                        <li className="item-2">
+                            <Link to="">Tài liệu</Link>
+                        </li>
+                        <li className="item-3">
+                            <Link to="">Bài tập</Link>
+                        </li>
+                        <li className="item-4">
+                            <Link to="">Thông tin</Link>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </Layout>
     )
 }

@@ -1,82 +1,74 @@
-.topNav {
+// Header - phần có logo | search bar | avatar user
+.header {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 0 15px;
+    gap: 12px;
+    padding: 14px 10px;
     align-items: center;
+    background: #334155;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    min-height: 2.3rem;
 
-    background: #0f172a;
-    color: #fff;
-    padding: 15px;
-    border-radius: 12px;
-
-    .logo {
-        
-        img {
-            display: block;
-            height: 45px;
-            width: 45px;
-            border-radius: 10px;
-        }
+    // Logo
+    img {
+        height: 45px;
+        width: 45px;
+        border-radius: 5px;
     }
 
+    // Search
     .search {
+        flex: 1;
+        min-width: 0;
 
         input {
             width: 100%;
-            padding: 10px 10px;
-            border-radius: 10px;
+            padding: 6px 12px;
+            border-radius: 20px;
             border: 1px solid #334155;
-            background: #0b1220;
-            color: #fff;
             outline: none;
+            box-sizing: border-box;
         }
     }
 
+    // Avatar
     .avatar {
         
+
         img {
-            width: 45px;
+            border-radius: 50%;
             height: 45px;
+            width: 45px;
             object-fit: cover;
-            border: 1px solid #334155;
-            border-radius: 45px;
+            border: 2px solid #334155;
         }
     }
 }
 
-.botNav {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
+// Main - nội dung import từ Home
 
-    background: #0f172a;
-    color: #fff;
-    padding: 15px 10px;
-    border-radius: 12px 12px 0 0;
-
-    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0));
+// Footer - phần trang chủ | tài liệu | bài tập | thông tin
+.footer {
 
     .list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
+        background: #334155;
+        padding: 18px 10px;
 
-        li {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            list-style-type: none;
 
-            a {
-                display: block;
-                text-decoration: none;
-                font-size: 1.1rem;
-                padding: 6px 0;
-                color: #fff;
+            li {
 
-                &:hover {
-                    color: #38bdf8;
+                a {
+                    color: #fff;
+                    
+                    &:hover {
+                        color: #ccc;
+                    }
                 }
             }
         }

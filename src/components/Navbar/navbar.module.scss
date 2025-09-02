@@ -1,75 +1,73 @@
-// Header - phần có logo | search bar | avatar user
+// Navbar
 .header {
+    background: #000;
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
-    padding: 14px 10px;
+    grid-template-columns: 180px 1fr 280px;
+    grid-template-areas: "logo menu search";
     align-items: center;
-    background: #334155;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    min-height: 2.3rem;
+    gap: 12px;
+    padding: 8px 300px;
 
     // Logo
-    img {
-        height: 45px;
-        width: 45px;
-        border-radius: 5px;
-    }
-
-    // Search
-    .search {
-        flex: 1;
-        min-width: 0;
-
-        input {
-            width: 100%;
-            padding: 6px 12px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            outline: none;
-            box-sizing: border-box;
-        }
-    }
-
-    // Avatar
-    .avatar {
-        
+    .logo {
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-            border-radius: 50%;
-            height: 45px;
-            width: 45px;
-            object-fit: cover;
-            border: 2px solid #334155;
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
         }
     }
-}
 
-// Main - nội dung import từ Home
-
-// Footer - phần trang chủ | tài liệu | bài tập | thông tin
-.footer {
-
-    .list {
-        background: #334155;
-        padding: 18px 10px;
+    // Menu
+    .menu {
+        grid-area: menu;
 
         ul {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
             list-style-type: none;
+            margin: 0;
+            padding: 0;
 
             li {
-
+                
                 a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    font-weight: bold;
                     color: #fff;
-                    
+
                     &:hover {
-                        color: #ccc;
+                        background: var(--primary-light);
+                        color: var(--primary-color);
                     }
                 }
+            }
+        }
+    }
+
+    .searchBar {
+        grid-area: search;
+
+        .search {
+            display: flex;
+
+            input {
+                width: 100%;
+                padding: 10px 12px;
+                border-radius: 8px;
+                border: 1px solid #999;
+                outline: none;
             }
         }
     }

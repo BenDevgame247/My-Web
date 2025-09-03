@@ -1,7 +1,6 @@
 import clsx from "clsx"
 import { Link } from "react-router"
 
-import Layout from "../Layout/layout"
 import styles from "./navbar.module.scss"
 import logo from "../../assets/LogoDiscord.png"
 

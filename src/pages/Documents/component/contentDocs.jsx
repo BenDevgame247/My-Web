@@ -1,14 +1,12 @@
-// import clsx from "clsx"
+import clsx from "clsx"
 
-import Layout from "../../../components/Layout/layout"
-// import styles from "./contentDocs.module.scss"
+
+import styles from "./contentDocs.module.scss"
 
 export default function ContentDocs() {
     return (
-        <Layout>
-            <div>
+            <div className={clsx(styles.content)}>
                 <h3>123456</h3>
             </div>
-        </Layout>
     )
 }

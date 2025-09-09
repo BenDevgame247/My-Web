@@ -11,8 +11,13 @@ export default function ContentDocs() {
                 {/* Sidebar - List of link director to main documents */}
                 <aside className={clsx(styles.sidebar)}>
                     <ul className={clsx(styles.sidebarList)}>
-                        <li>
-                            <Link to="getting-start">Bắt đầu</Link>
+                        <li className={clsx(styles.s)}>
+                            <Link to="khai-niem-lap-trinh">Giới thiệu</Link>
+                            {/* <ul className={clsx(styles.subList)}>
+                                <li>
+                                    <Link to="">Khái niệm lập trình</Link>
+                                </li>
+                            </ul> */}
                         </li>
                         <li>
                             <Link to="docs-c">Tài liệu C</Link>

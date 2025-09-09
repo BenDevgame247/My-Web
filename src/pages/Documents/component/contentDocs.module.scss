@@ -1,0 +1,47 @@
+.content {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 12px;
+
+    .sidebar {
+        background: #ddd;
+        border: 2px solid #fff;
+        padding: .5rem .5rem;
+        
+
+        .sidebarList {
+            list-style-type: none;
+            justify-self: center;
+            display: block;
+
+
+            li {
+                padding: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: var(--text-black);
+                }
+            }
+
+            // List of HTML Documents
+            .list {
+                position: relative;
+
+                .subList {
+                    position: absolute;
+                    display: none;
+                    list-style-type: none;
+
+                    li {
+                        border-top: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+
+    .boxContent {
+
+    }
+}

@@ -2,7 +2,7 @@ import clsx from "clsx"
 import { Link } from "react-router"
 
 import styles from "./contentDocs.module.scss"
-import GettingStart from "../contents/gettingStart"
+import ProgrammingConcepts from "../contents/concepts/programming/programming"
 
 export default function ContentDocs() {
     return (
@@ -38,7 +38,7 @@ export default function ContentDocs() {
 
                 {/* Box Content - this is a main content of documents of programing language */}
                 <div className={clsx(styles.boxContent)}>
-                    <GettingStart/>
+                    <ProgrammingConcepts/>
                 </div>
             </div>
     )

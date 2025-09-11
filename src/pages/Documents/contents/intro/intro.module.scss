@@ -1,0 +1,64 @@
+.container {
+    background: var(--primary-light);
+    
+    .intro {
+        .needPadding {
+            padding-top: 10px;
+            // padding-left: 10px;
+        }
+
+        .needFontS {
+            font-size: 2rem;
+        }
+
+        .needCss {
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+
+            .needSpace {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .needPaddingLeft {
+                padding-left: 50px;
+
+                li {
+                    list-style-type: square;
+                }
+            }
+        }  
+
+        .needCenter {
+            justify-self: center;
+        }
+        
+        .needBorderBottom {
+            width: 75%;
+            justify-self: center;
+            border: 2px solid #ccc;
+        }
+    }
+    
+    .btnHandle {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .btn {
+            padding: 12px 50px;
+            background: var(--primary-color);
+            outline: none;
+
+            a {
+                color: var(--text-black);
+
+                &:hover {
+                    color: var(--text-white);
+                }
+            }
+        }
+    }
+}

@@ -1,20 +1,21 @@
 .content {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 240px 1fr 280px;
     gap: 12px;
 
     .sidebar {
-        background: #ddd;
+        background: #fff;
         border: 2px solid #fff;
         padding: .5rem .5rem;
-        
+        border-right: 5px solid #ccc;
+        font-size: 1.15rem;
 
         .sidebarList {
             list-style-type: none;
             justify-self: center;
             display: block;
 
-
+            
             li {
                 padding: 10px;
 
@@ -22,6 +23,10 @@
                     text-decoration: none;
                     color: var(--text-black);
                 }
+            }
+
+            .needDisplayBlock {
+                display: block;
             }
 
             // List of HTML Documents

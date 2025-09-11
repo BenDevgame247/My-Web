@@ -4,7 +4,9 @@ import App from "../../App";
 import Documents from "../../pages/Documents/document";
 import Home from "../../pages/Home/home"
 import Forum from "../../pages/Forum/forum";
-import ProgrammingConcepts from "../../pages/Documents/contents/concepts/programming/programming";
+import Intro from "../../pages/Documents/contents/intro/intro";
+import ProgrammingIntro from "../../pages/Documents/contents/intro/programming/programmingIntro";
+
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +18,14 @@ export const router = createBrowserRouter([
                 path: "tai-lieu", 
                 element: <Documents/>,
                 children: [
-                    {path: "khai-niem-lap-trinh", element: <ProgrammingConcepts/>}
+                    {path: "gioi-thieu", element: <Intro/>},
+                    {
+                        path: "programming", 
+                        element: <ProgrammingIntro/>,
+                        children: [
+                            {},
+                        ]
+                    }
                 ]
             },
             {path: "dien-dan", element: <Forum/>},

@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    
+
+    .header {
+        color: var(--text-black);
+        // background: #ccc;
+        // padding: 10px;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .boxSubTitle {
+            width: 40%;
+            border-left: 4px solid #ccc;
+            border-radius: 10px;
+            border-right: 4px solid #ccc;
+            background: #ccc;
+
+            p {
+                ul {
+                    .needSpace {
+                        line-height: 1.5rem;
+                        padding-left: 15px;
+                        list-style-type: none;
+                    }
+
+                    .needPaddingTop {
+                        padding-top: 10px;
+                    }
+
+                    .needPaddingBottom {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

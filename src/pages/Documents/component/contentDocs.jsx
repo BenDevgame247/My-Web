@@ -2,6 +2,8 @@ import clsx from "clsx"
 import { Link } from "react-router"
 
 import styles from "./contentDocs.module.scss"
+import Intro from "../contents/intro/intro"
+import ProgrammingIntro from "../contents/intro/programming/programmingIntro"
 import ProgrammingConcepts from "../contents/concepts/programming/programming"
 
 export default function ContentDocs() {
@@ -11,16 +13,11 @@ export default function ContentDocs() {
                 {/* Sidebar - List of link director to main documents */}
                 <aside className={clsx(styles.sidebar)}>
                     <ul className={clsx(styles.sidebarList)}>
-                        <li className={clsx(styles.s)}>
-                            <Link to="khai-niem-lap-trinh">Giới thiệu</Link>
-                            {/* <ul className={clsx(styles.subList)}>
-                                <li>
-                                    <Link to="">Khái niệm lập trình</Link>
-                                </li>
-                            </ul> */}
+                        <li className={clsx(styles.needDisplayBlock)}>
+                            <Link to="gioi-thieu">Giới thiệu</Link>
                         </li>
                         <li>
-                            <Link to="docs-c">Tài liệu C</Link>
+                            <Link to="programming">Programming</Link>
                         </li>
                         <li className={clsx(styles.list)}>
                             <Link to="docs-html">Tài liệu HTML</Link>
@@ -38,7 +35,7 @@ export default function ContentDocs() {
 
                 {/* Box Content - this is a main content of documents of programing language */}
                 <div className={clsx(styles.boxContent)}>
-                    <ProgrammingConcepts/>
+                    <Intro/>
                 </div>
             </div>
     )

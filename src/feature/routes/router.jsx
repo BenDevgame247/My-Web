@@ -6,6 +6,7 @@ import Home from "../../pages/Home/home"
 import Forum from "../../pages/Forum/forum";
 import Intro from "../../pages/Documents/contents/intro/intro";
 import ProgrammingIntro from "../../pages/Documents/contents/intro/programming/programmingIntro";
+import ProgrammingConcepts from "../../pages/Documents/contents/concepts/programming/programming";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
                         path: "programming", 
                         element: <ProgrammingIntro/>,
                         children: [
+                            {path: "khai-niem", element: <ProgrammingConcepts/>},
                             {},
                         ]
                     }
